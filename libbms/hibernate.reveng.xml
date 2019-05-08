@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table name="function" catalog="zhangyong" class="Function">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="academypeople" catalog="zhangyong"
+		class="AcademyPeople">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="pb_advancedgroup" catalog="zhangyong"
+		class="AdvancedGroup">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="pb_innovatepublishing" catalog="zhangyong"
+		class="InnovatePublishing">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="pb_leaderinstructions" catalog="zhangyong"
+		class="LeaderInstructions">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="pb_newsletter" catalog="zhangyong"
+		class="Newsletter">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="pb_organization" catalog="zhangyong"
+		class="Organization">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="pb_prize" catalog="zhangyong" class="Prize">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_delayreport" catalog="kepuability"
+		class="DelayReport">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_itemlist" catalog="kepuability" class="ItemList">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_itemfraction" catalog="kepuability"
+		class="ItemFraction">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="sampleregiste" catalog="kepuability"
+		class="SampleRegiste">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="sendsample" catalog="kepuability" class="SendSample">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="sendcheckitem" catalog="kepuability"
+		class="SendCheckItem">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="checkreport" catalog="kepuability"
+		class="CheckReport">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="subcheckreport" catalog="kepuability"
+		class="SubCheckReport">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="instrument" catalog="kepuability" class="Instrument">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="groups" catalog="libbms" class="Groups">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="groupuser" catalog="libbms" class="GroupUser">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="menufunction" catalog="libbms" class="MenuFunction">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="income" catalog="libbms" class="Income">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+<table name="prepayment" catalog="libbms" class="Prepayment">
+	<primary-key>
+		<generator class="increment"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

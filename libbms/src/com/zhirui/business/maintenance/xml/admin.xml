@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="admin" namespace="/business/admin" extends="default">
+		<action name="*CheckItem" method="{1}" class="com.zhirui.business.maintenance.action.CheckItemAction">
+			<result name="list">list.jsp</result>
+			<result name="add">checkitem/add.jsp</result>
+			<result name="modify">checkitem/modify.jsp</result>
+			<result name="detail">checkitem/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">checkitem/listCheckItem</param>
+				<param name="namespace">/business/admin</param>
+			</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<action name="*Instrument" method="{1}" class="com.zhirui.business.maintenance.action.InstrumentAction">
+			<result name="list">list.jsp</result>
+			<result name="add">instrument/add.jsp</result>
+			<result name="modify">instrument/modify.jsp</result>
+			<result name="detail">instrument/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">instrument/listInstrument</param>
+				<param name="namespace">/business/admin</param>
+			</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<!--  standardCheck action配置lyg -->
+		<action name="*CheckStandard" method="{1}" class="com.zhirui.business.maintenance.action.CheckStandardAction">
+			<result name="list">list.jsp</result>
+			<result name="add">checkstandard/add.jsp</result>
+			<result name="modify">checkstandard/modify.jsp</result>
+			<result name="detail">checkstandard/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">checkstandard/listCheckStandard</param>
+				<param name="namespace">/business/admin</param>
+			</result>
+		</action>
+		<!--  standardCheck action配置lyg -->
+		<action name="*CheckStandard" method="{1}" class="com.zhirui.business.maintenance.action.CheckStandardAction">
+			<result name="list">list.jsp</result>
+			<result name="add">checkstandard/add.jsp</result>
+			<result name="modify">checkstandard/modify.jsp</result>
+			<result name="detail">checkstandard/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">checkstandard/listCheckStandard</param>
+				<param name="namespace">/business/admin</param>
+			</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<!-- standardCheck action配置 -->
+		
+		<!--  labproc action配置lyg -->
+		<action name="*LabProcess" method="{1}" class="com.zhirui.business.maintenance.action.LabProcessAction">
+			<result name="list">list.jsp</result>
+			<result name="add">labprocess/add.jsp</result>
+			<result name="modify">labprocess/modify.jsp</result>
+			<result name="detail">labprocess/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">labprocess/listLabProcess</param>
+				<param name="namespace">/business/admin</param>
+			</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+			
+		</action>
+		<!-- labproc action配置 -->
+		<!--  labproc action配置lyg -->
+		<action name="*LabProcessContent" method="{1}" class="com.zhirui.business.maintenance.action.LabProcessContentAction">
+			<result name="addfindOk">labprocess/add.jsp</result>
+			<result name="modifyfindOk">labprocess/modify.jsp</result>
+		</action>
+		<!-- labproc action配置 -->
+		
+		
+		
+		
+		
+		<!--  QrCode action配置lyg 
+		<action name="*QrCode" method="{1}" class="com.zhirui.business.lib.action.QrCodeAction">
+			<result name="creatOk"></result>
+			
+		</action>
+		-->
+		
+		
+		
+		
+		<!--  SubSendSampleNoQrCode action配置lyg -->
+		<action name="*SubSendSampleNoQrCode" method="{1}" class="com.zhirui.business.lib.action.SubSendSampleNoQrCodeAction">
+			<result name="findOk">sendsamplesubmit/submit.jsp</result>
+			<result name="submitOk">sendsamplesubmit/sendsamplesubmit.jsp</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		
+		
+		<!-- labproc action配置 -->
+		<action name="*User" method="{1}" class="com.zhirui.business.maintenance.action.ManageUserAction">
+			<result name="list">list.jsp</result>
+			<result name="add">user/add.jsp</result>
+			<result name="modify">user/modify.jsp</result>
+			<result name="detail">user/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">user/listUser</param>
+				<param name="namespace">/business/admin</param>
+			</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+	</package>
+</struts>

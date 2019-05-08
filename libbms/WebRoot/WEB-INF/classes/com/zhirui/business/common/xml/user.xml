@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="user" namespace="/" extends="default">
+		<action name="*" method="{1}" class="com.zhirui.business.common.action.UserAction">
+			<result name="index">/index.jsp</result>
+			<result name="to_index" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/index</param>
+			</result>
+			<result name="notice">/notice.jsp</result>
+			<result name="kepu_index" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/kepu</param>
+			</result>
+			<result name="party_index" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/partyindex</param>
+			</result>
+						
+			<result name="login">login.jsp</result>
+			<result name="adminparty_index" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/admin/party</param>
+			</result>
+
+			<result name="change_password">/user/change_password.jsp</result>
+			<result name="to_change_password" type="redirectAction">
+				<param name="actionName">changepassword</param>
+				<param name="namespace">/</param>
+				<param name="systype">${systype}</param>
+			</result>
+			<result name="change_info">/user/change_info.jsp</result>
+			<result name="to_change_info" type="redirectAction">
+				<param name="actionName">changeinfo</param>
+				<param name="namespace">/</param>
+				<param name="systype">${systype}</param>
+			</result>
+		</action>
+	</package>
+</struts>

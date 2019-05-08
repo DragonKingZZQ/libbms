@@ -1,0 +1,420 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+font-size:14px;
+color:#333333;
+/*background:url(../img/bg-page.jpg) repeat-x top; */
+margin:0;
+}
+
+.cls
+{
+clear:both
+}
+
+.mustfill
+{color:red}
+
+
+.float_left
+{
+float:left;
+}
+.float_right
+{
+float:right;
+}
+
+.textdesc
+{
+color:#999999;
+font-size:12px;
+}
+
+ul.indexlst
+{
+margin:20px;
+line-height:24px;
+}
+
+ul.indexlst li
+{
+margin-bottom:10px;
+}
+
+
+#pagebody
+{
+width:770px;
+margin:0 auto;
+padding:0px;
+}
+
+a:link{color:blue;text-decoration:none;}
+a:visited{color:blue;text-decoration:none;}
+a:hover{color:red;text-decoration:none;}
+a:active{color:red;text-decoration:none;}
+
+#navbar
+{
+color:#444;
+font-size:14px;
+font-weight:bold;
+padding-top:124px;
+padding-left:30px;
+font-family:"微软雅黑","黑体","Times New Roman", Times, serif
+}
+
+#navbar a:link{text-decoration:none;color:#444;font-weight:bold;}
+#navbar a:visited{text-decoration:none;color:#444;font-weight:bold;}
+#navbar a:hover{text-decoration:none;color:red;font-weight:bold;}
+#navbar a:active{text-decoration:none;color:red;font-weight:bold;}
+
+#mainbody
+{
+min-height:750px;
+border:1px #d6e4ed solid;
+background-color:#fff;
+overflow: hidden;
+margin-top:0px;
+margin-left:0px;
+}
+
+#bottombody
+{
+clear:both;
+height:60px;
+background-color:#333333;
+text-align:center;
+padding-top:10px;
+font-size:12px;
+line-height:24px;
+background-image: url(../img/bottom.jpg);
+background-repeat :no-repeat;
+}
+
+#bottombody a
+{
+text-decoration:none;
+color:#eee;
+}
+
+
+#leftbar
+{
+width:225px;
+float:left;
+border-right:1px solid #d6e4ed;
+margin-top:15px;
+}
+
+#rightbar
+{
+float:right;
+width:750px;
+margin-top:15px;
+margin-bottom:15px;
+}
+
+/*---用于登陆页---*/
+#loginbar
+{
+margin:20px;
+height:400px;
+}
+
+
+/*---用于首页---*/
+#menubar
+{
+width:560px;
+float:left;
+margin:30px;
+}
+
+#newsbar
+{
+float:right;
+width:340px;
+margin:30px 30px 30px 0;
+border:1px solid #9edbfb;
+}
+
+div.functionpanel
+{
+margin-bottom:10px;
+}
+
+
+div.functionpanel .headtitle
+{
+color:#5fb3ee;
+font-size:16px;
+line-height:40px;
+font-weight:bold;
+background-image:url(../img/cbg.jpg);
+height:40px;
+padding-left:10px;
+}
+
+div.functionpanel .more
+{
+color:#5890b7;
+font-size:14px;
+line-height:40px;
+text-align:right;
+margin-top:-40px;
+padding-right:10px;
+}
+
+div.functionpanel a
+{
+text-decoration:none;
+color:#5890b7;
+}
+
+div.functionpanel ul
+{
+list-style:inside;
+padding:10px;
+margin:0;
+}
+
+div.functionpanel li
+{
+margin-bottom:10px;
+line-height:24px;
+}
+
+div.functionpanel li a:link
+{
+text-decoration:none;
+color:#333333;
+}
+
+div.functionpanel li a:visited
+{
+text-decoration:none;
+color:#999999;
+}
+
+div.functionpanel li a:active
+{
+text-decoration:none;
+color:red;
+}
+
+div.functionpanel li a:hover
+{
+text-decoration:none;
+color:red;
+}
+
+
+
+
+/*-----*/
+
+#contentbar
+{
+padding:0px;
+margin-left:0px;
+margin-right:0px;
+}
+
+#subnav
+{
+list-style:none;
+margin:0;
+padding:0;
+font-size:12px;
+
+}
+
+#subnav li
+{
+background-image: url(../img/navbut-gray.jpg);
+width:182px;
+height:38px;
+margin-top:10px;
+margin-left:20px;
+color:#666;
+line-height:38px;
+text-align:center;
+font-weight:bold;
+}
+
+#subnav li.current
+{
+background-image: url(../img/navbut-blue.jpg);
+width:182px;
+height:38px;
+margin-top:10px;
+margin-left:20px;
+color:#eee;
+line-height:38px;
+text-align:center;
+font-weight:bold;
+}
+
+#subnav a:link{text-decoration:none;color:#333333;font-weight:bold;}
+#subnav a:visited{text-decoration:none;color:#333333;font-weight:bold;}
+#subnav a:hover{text-decoration:none;color:red;font-weight:bold;}
+#subnav a:active{text-decoration:none;color:red;font-weight:bold;}
+
+#subnav li.current a:link{text-decoration:none;color:#fff;font-weight:bold;}
+#subnav li.current a:visited{text-decoration:none;color:#fff;font-weight:bold;}
+
+#subnavdesc
+{
+font-size:12px;
+padding:20px;
+line-height:20px;
+}
+
+#subnavdesc .title
+{
+color:#0066cc;
+font-weight:bold;
+font-size:14px;
+}
+
+
+h1
+{
+font-size:20px;
+padding-bottom:10px;
+border-bottom:1px dashed #ccccff;
+height:20px;
+}
+
+#searchbar
+{
+float:left;
+
+width:540px;
+line-height:36px;
+}
+
+
+#searchbar2
+{
+
+float:left;
+width:750px;
+line-height:36px;
+}
+
+
+
+#mainbody form
+{
+margin:0;
+padding:0;
+}
+
+#opbar
+{
+height:31px;
+float:right;
+width:110px;
+margin-top:35px;
+}
+
+
+
+
+#pagebar
+{
+
+margin:10px;
+text-align: center;
+font-size:12px;
+float:right;
+}
+
+
+
+
+#opbar2
+{
+margin-top:15px;
+
+}
+
+
+#opbar img
+{
+border:0;
+}
+
+
+#opbar2 img
+{
+border:0;
+}
+
+
+table.lsttable
+{
+clear:both;
+margin-top:15px;
+width:98%;
+border:1px solid #d6e4ed;
+
+}
+
+
+
+table.lsttable th
+{
+background-color:#e0f1fc;
+color:#33666666;
+font-weight:bold;
+border:1px solid #d6e4ed;
+padding:8px;
+}
+
+
+table.lsttable td
+{
+color:#333333;
+border:1px solid #d6e4ed;
+padding:6px;
+}
+
+
+table.frmtable
+{
+
+border:0;
+width:100%;
+}
+
+
+table.frmtable td
+{
+padding:8px;
+border:0;
+}
+
+table.frmtable tr.textdesc td {
+color: #aaa;
+font-size: 12px;
+padding-top:0px;
+}
+
+table a:link{color:#33666666; text-decoration:none}
+table a:visited {color:#33666666; text-decoration:none}
+table a:hover{color:red; text-decoration:none}
+table a:active{color:red; text-decoration:none}
+#tooltip 
+{ 
+position: absolute; 
+border: 1px #solid #333; 
+background: #f7f5d1; 
+padding: 1px; 
+color: #333; 
+display: none; 
+} 

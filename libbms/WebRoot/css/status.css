@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* 设置提交状态的颜色 */
+
+/*用户端的修改提交状态*/
+.statusA	/* 登记*/
+{
+color:red;
+}
+
+.statusB	/* 派样*/
+{
+color:#FFAA00;
+}
+
+.statusC	/* 接收派样*/
+{
+color:red;
+}
+
+
+.statusD	/*完成检验*/
+{
+color:yellow;
+}
+
+.statusE	/* 完成报告*/
+{
+color:lightseagreen;
+}
+
+.statusF	/* 任务完成*/
+{
+color:green;
+}

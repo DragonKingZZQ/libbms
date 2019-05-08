@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="bms" namespace="/business" extends="default">
+		<action name="*SampleRegiste" method="{1}" class="com.zhirui.business.lib.action.SampleRegisteAction">
+			<result name="list">list.jsp</result>
+			<result name="add">registe/add.jsp</result>
+			<result name="modify">registe/modify.jsp</result>
+			<result name="detail">registe/detail.jsp</result>
+			<result name="cash">registe/addIncome.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">registe/listSampleRegiste</param>
+				<param name="namespace">/business</param>
+			</result>
+			<result name="ajax" type="json">
+			    <param name="root">info</param>
+			</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<action name="*SendSample" method="{1}" class="com.zhirui.business.lib.action.SendSampleAction">
+			<result name="list">list.jsp</result>
+			<result name="add">send/add.jsp</result>
+			<result name="modify">send/modify.jsp</result>
+			<result name="receivesample">send/receivesample.jsp</result>
+			<result name="nextsend">send/nextsendsample.jsp</result>
+			<result name="checkfinish">send/checkfinish.jsp</result>
+			<result name="detail">send/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">send/listSendSample</param>
+				<param name="namespace">/business</param> 
+			</result>
+			<result name="ajax" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<action name="*CheckReport" method="{1}" class="com.zhirui.business.lib.action.CheckReportAction">
+			<result name="list">list.jsp</result>
+			<result name="add">checkreport/add.jsp</result>
+			<result name="modify">checkreport/modify.jsp</result>
+			<result name="detail">checkreport/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">checkreport/listCheckReport</param>
+				<param name="namespace">/business</param>
+			</result>
+			<result name="ajax" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<action name="*Statistics" method="{1}" class="com.zhirui.business.lib.action.StatisticsAction">
+			<result name="list">list.jsp</result>
+		</action>
+		<action name="*Prepayment" method="{1}" class="com.zhirui.business.lib.action.PrepaymentAction">
+			<result name="list">list.jsp</result>
+			<result name="add">financial/prepay/add.jsp</result>
+			<result name="modify">financial/prepay/modify.jsp</result>
+			<result name="detail">financial/prepay/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">financial/prepay/listPrepayment</param>
+				<param name="namespace">/business</param>
+			</result>
+			<result name="ajax" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<action name="*Income" method="{1}" class="com.zhirui.business.lib.action.IncomeAction">
+			<result name="list">list.jsp</result>
+			<result name="add">financial/income/add.jsp</result>
+			<result name="modify">financial/income/modify.jsp</result>
+			<result name="detail">financial/income/detail.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">financial/income/listIncome</param>
+				<param name="namespace">/business</param>
+			</result>
+			<result name="ajax" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+		<action name="*Query" method="{1}" class="com.zhirui.business.maintenance.action.CheckItemAction">
+			<result name="list">list.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">checkitem/listCheckItem</param>
+				<param name="namespace">/business/admin</param>
+			</result>
+			<result name="exists" type="json">
+			    <param name="root">info</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.objectFactory" value="spring"/>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<constant name="struts.multipart.saveDir" value="tempdir" />
+	<constant name="struts.multipart.maxSize" value="2097152000" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.action.extension" value="html" />
+
+	<package name="default" extends="json-default">
+		<interceptors>
+			<interceptor name="authority" class="cn.kepu.base.interceptor.AuthorityInterceptor"></interceptor>
+			<interceptor name="actionProcess" class="cn.kepu.base.interceptor.ActionInterceptor"></interceptor>
+			<interceptor-stack name="authorityStack">
+				<interceptor-ref name="defaultStack">
+					<param name="params.excludeParams">(.*\.|^|.*|\[('|"))(c|C)lass(\.|('|")]|\[).*,^dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,^parameters\..*,^action:.*,^method:.*</param>
+				</interceptor-ref>
+				<interceptor-ref name="authority"></interceptor-ref>
+				<interceptor-ref name="actionProcess"></interceptor-ref>
+				
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="authorityStack"></default-interceptor-ref>
+		<global-results>
+			<result name="global_login" type="redirectAction">
+				<param name="actionName">login</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">error</param>
+				<param name="namespace">/global</param>
+			</result>
+			<result name="exception" type="redirectAction">
+				<param name="actionName">error</param>
+				<param name="namespace">/global</param>
+				<param name="code">500</param>
+			</result>
+			<result name="info" type="redirectAction">
+				<param name="actionName">info</param>
+				<param name="namespace">/global</param>
+			</result>
+			<result name="page_jumpto" type="redirect">
+				<param name="statusCode">%{returnCode}</param>
+				<param name="location">%{pageUrl}</param>
+			</result>
+			<result name="json_data" type="json">
+				<param name="root">jsonMap</param>
+				<param name="excludeNullProperties">true</param>
+			</result>
+			<result name="string_data" type="stream">
+				<param name="allowCaching">false</param>
+				<param name="contentCharSet">UTF-8</param>
+				<param name="contentType">%{contentType}</param>
+				<param name="inputName">stringStream</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">info</param>
+				<param name="namespace">/global</param>
+			</result>
+			
+		</global-results>
+	</package>
+
+	<include file="/com/zhirui/business/common/xml/global.xml" />
+	<include file="/com/zhirui/business/common/xml/user.xml" />
+
+	<include file="/com/zhirui/business/lib/xml/index.xml" />
+	<include file="/com/zhirui/business/lib/xml/libbms.xml" />
+	
+	<include file="/com/zhirui/business/maintenance/xml/admin.xml" />
+</struts>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd" >
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQL5Dialect
+		</property>
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="hibernate.connection.url">
+		jdbc:mysql://localhost:3306/libbms?userUnicode=true&amp;characterEncoding=utf-8&amp;characterEncoding=utf-8
+		</property>
+
+		<property name="hibernate.connection.username">root</property>
+
+		<property name="hibernate.connection.password">
+			970128
+		</property>
+
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">false</property>
+
+		<property name="hibernate.current_session_context_class">
+			thread
+		</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.timeout">120</property>
+		<property name="hibernate.c3p0.max_statements">100</property>
+		<property name="hibernate.c3p0.idle_test_period">120</property>
+		<property name="hibernate.c3p0.acquire_increment">2</property>
+		<property name="hibernate.c3p0.validate">true</property>
+
+        <mapping resource="com/zhirui/business/lib/bean/Offices.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/common/bean/User.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/common/bean/Attachment.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/EntrustCompany.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/common/bean/Qualification.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/CheckItem.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/Instrument.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/RelationUser.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/RegisteCheckItem.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/SampleRegiste.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/SubCheckReport.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/CheckReport.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/SendSample.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/SendCheckItem.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/Groups.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/MenuFunction.hbm.xml" />
+		<mapping
+			resource="com/zhirui/business/lib/bean/GroupUser.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/Prepayment.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/Income.hbm.xml" />
+		<mapping resource="com/zhirui/business/common/bean/SampleCategory.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/CheckStandard.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/LabProcess.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/LabProcessContent.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/CheckImage.hbm.xml" />
+		<mapping resource="com/zhirui/business/lib/bean/SubSendSampleQrCode.hbm.xml" />
+	
+	</session-factory>
+</hibernate-configuration>
